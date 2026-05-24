@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-    
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +12,8 @@
             50% { transform: scale(1.05); }
         }
         .animate-wasa { animation: pulse-red 2s infinite; }
-    </style>
-    <title>PowerGym Juigalpa</title>
-
-    <style>
+        
+        /* Asegura el comportamiento de scroll suave en navegadores antiguos */
         html {
             scroll-behavior: smooth;
         }
@@ -33,18 +30,10 @@
             </span>
             
             <div class="flex gap-4 sm:gap-6 text-[11px] md:text-sm font-bold tracking-wider uppercase">
-               <a href="#inicio" class="text-sm font-bold uppercase tracking-wide text-white hover:text-red-500 transition-colors">
-        Inicio
-    </a>
-    <a href="#suplementos" class="text-sm font-bold uppercase tracking-wide text-white hover:text-red-500 transition-colors">
-        Suplementos
-    </a>
-    <a href="#equipamiento" class="text-sm font-bold uppercase tracking-wide text-white hover:text-red-500 transition-colors">
-        Equipamiento
-    </a>
-    <a href="#informacion" class="text-sm font-bold uppercase tracking-wide text-white hover:text-red-500 transition-colors">
-        Gimnasio
-    </a>
+                <a href="#inicio" class="text-stone-300 hover:text-red-500 transition-colors">Inicio</a>
+                <a href="#suplementos" class="text-stone-300 hover:text-red-500 transition-colors">Suplementos</a>
+                <a href="#equipamiento" class="text-stone-300 hover:text-red-500 transition-colors">Equipamiento</a>
+                <a href="#informacion" class="text-stone-300 hover:text-red-500 transition-colors">Gimnasio</a>
             </div>
 
         </div>
@@ -61,23 +50,22 @@
         <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4 text-white uppercase">Supera tus límites</h1>
         <p class="text-stone-400 text-sm md:text-base max-w-md mb-8 font-light">El espacio perfecto, la mejor suplementación y el equipamiento necesario para alcanzar tu mejor versión física en Juigalpa.</p>
         
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#creatinas" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-full transition duration-300 transform hover:scale-105 shadow-xl shadow-red-600/10 tracking-wide uppercase text-xs">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md px-4">
+            <a href="#suplementos" class="w-full sm:w-auto text-center bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-full transition duration-300 transform hover:scale-105 shadow-xl shadow-red-600/10 tracking-wide uppercase text-xs">
                 <i class="fa-solid fa-bottle-dropper mr-2"></i> Ver Suplementos
             </a>
-            <a href="#equipamiento" class="bg-stone-900 hover:bg-stone-800 text-white border border-stone-700 font-bold px-8 py-3.5 rounded-full transition duration-300 transform hover:scale-105 tracking-wide uppercase text-xs">
+            <a href="#equipamiento" class="w-full sm:w-auto text-center bg-stone-900 hover:bg-stone-800 text-white border border-stone-700 font-bold px-8 py-3.5 rounded-full transition duration-300 transform hover:scale-105 tracking-wide uppercase text-xs">
                 <i class="fa-solid fa-shirt mr-2"></i> Ver Equipamiento
             </a>
+            <a href="#informacion" class="w-full sm:w-auto text-center bg-stone-900/50 hover:bg-stone-800 text-white border border-stone-700 font-bold px-6 py-3.5 rounded-full transition duration-300 transform hover:scale-105 tracking-wide uppercase text-xs flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Conocer más del gimnasio
+            </a>
         </div>
-        <a href="#informacion" class="w-full sm:w-auto text-center px-6 py-3 border border-stone-700 bg-stone-900/50 backdrop-blur-sm text-white font-bold text-sm rounded-lg hover:bg-stone-800 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
-    <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-    </svg>
-    Conocer más del gimnasio
-</a>
     </header>
-    </div>
-</section>
+
     <section class="py-16 bg-stone-900/50 text-center px-4 border-b border-stone-800">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -108,7 +96,7 @@
         </div>
     </section>
 
-    <section id="suplementos" class="py-12 bg-stone-950 text-white">
+    <section id="suplementos" class="py-12 bg-stone-950 text-white scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4">
             
             <div class="mb-10 text-center md:text-left">
@@ -170,9 +158,7 @@
                             </div>
                         </div>
 
-                        <div class="pt-4 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <div>
-                            </div>
+                        <div class="pt-4 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-end gap-4">
                             <a href="https://wa.me/50586289512?text=%C2%A1Hola!%20Estoy%20interesado%20en%20la%20Creatina%20Platinum%20de%2080%20servicios." 
                                target="_blank" 
                                class="w-full sm:w-auto text-center px-6 py-3 bg-red-600 text-white font-bold text-sm rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/10 uppercase tracking-wider">
@@ -186,161 +172,162 @@
 
         </div>
     </section>
-<section id="preentrenos" class="py-12 bg-stone-950 text-white">
-    <div class="max-w-5xl mx-auto px-4">
-        
-        <div class="mb-10 text-center md:text-left">
-            <h2 class="text-2xl font-black tracking-wider text-red-500 uppercase border-l-4 border-red-600 pl-3">
-                Tienda de Suplementos: Pre-Entrenos
-            </h2>
-            <p class="text-sm text-stone-400 mt-2">
-                Maximiza tu energía, enfoque y rendimiento explosivo en cada sesión de entrenamiento.
-            </p>
-        </div>
 
-        <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                
-                <div class="w-full md:w-1/3 flex justify-center bg-stone-950 p-4 rounded-lg border border-stone-800/50">
-                    <img src="Cursepounch.jpg" alt="Pre-Workout The Curse" class="max-h-72 object-contain hover:scale-105 transition-transform duration-300">
-                </div>
+    <section id="preentrenos" class="py-12 bg-stone-950 text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <div class="mb-10 text-center md:text-left">
+                <h2 class="text-2xl font-black tracking-wider text-red-500 uppercase border-l-4 border-red-600 pl-3">
+                    Tienda de Suplementos: Pre-Entrenos
+                </h2>
+                <p class="text-sm text-stone-400 mt-2">
+                    Maximiza tu energía, enfoque y rendimiento explosivo en cada sesión de entrenamiento.
+                </p>
+            </div>
 
-                <div class="w-full md:w-2/3 flex flex-col justify-between">
-                    <div>
-                        <div class="flex flex-wrap items-center gap-2 mb-2">
-                            <span class="text-xs font-bold uppercase bg-red-500/10 text-red-500 px-2.5 py-1 rounded-md border border-red-500/20">
-                                Energía e Intensidad Extrema
-                            </span>
-                           <span class="text-xs font-bold uppercase bg-yellow-500/10 text-yellow-500 px-2.5 py-1 rounded-md border border-yellow-500/20">
+            <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-xl p-6 md:p-8">
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    
+                    <div class="w-full md:w-1/3 flex justify-center bg-stone-950 p-4 rounded-lg border border-stone-800/50">
+                        <img src="Cursepounch.jpg" alt="Pre-Workout The Curse" class="max-h-72 object-contain hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <div class="w-full md:w-2/3 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase bg-red-500/10 text-red-500 px-2.5 py-1 rounded-md border border-red-500/20">
+                                    Energía e Intensidad Extrema
+                                </span>
+                               <span class="text-xs font-bold uppercase bg-yellow-500/10 text-yellow-500 px-2.5 py-1 rounded-md border border-yellow-500/20">
                                     50 Servicios
                                 </span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-black tracking-wide text-stone-100 mb-3">
+                                The Curse!
+                            </h3>
+
+                            <p class="text-sm text-stone-300 leading-relaxed mb-6">
+                                Un pre-entreno diseñado exclusivamente para atletas que buscan romper sus límites, proporciona energía intensa. Es el suplemento ideal para entrenar con máxima potencia. <strong class="text-red-500">Disponible en deliciosos sabores frutales (consultar variedad disponible al apartar).</strong>
+                            </p>
+
+                            <div class="mb-6">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">
+                                    Beneficios Destacados
+                                </h4>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-300">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>Energía explosiva desde la primera dosis.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>Enfoque mental nítido para un entrenamiento mas intenso.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>Bombeos musculares masivos gracias a una mejor vasodilatación.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>Aumenta drásticamente la resistencia y retrasa la fatiga.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        
-                        <h3 class="text-2xl font-black tracking-wide text-stone-100 mb-3">
-                            The Curse!
-                        </h3>
 
-                        <p class="text-sm text-stone-300 leading-relaxed mb-6">
-                            Un pre-entreno diseñado exclusivamente para atletas que buscan romper sus límites, proporciona energía intensa. Es el suplemento ideal para entrenar con máxima potencia. <strong class="text-red-500">Disponible en deliciosos sabores frutales (consultar variedad disponible al apartar).</strong>
-                        </p>
-
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">
-                                Beneficios Destacados
-                            </h4>
-                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-300">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>Energía explosiva desde la primera dosis.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>Enfoque mental nítido para un entrenamiento mas intenso.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>Bombeos musculares masivos gracias a una mejor vasodilatación.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>Aumenta drásticamente la resistencia y retrasa la fatiga.</span>
-                                </li>
-                            </ul>
+                        <div class="pt-4 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-end gap-4">
+                            <a href="https://wa.me/50586289512?text=%C2%A1Hola!%20Estoy%20interesado%20en%20el%20pre-entreno%20The%20Curse%20de%2050%20servicios.%20%C2%BFQu%C3%A9%20sabores%20tienen%20disponibles%3F" 
+                               target="_blank" 
+                               class="w-full sm:w-auto text-center px-6 py-3 bg-red-600 text-white font-bold text-sm rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/10 uppercase tracking-wider">
+                                <i class="fa-brands fa-whatsapp mr-2"></i> Apartar por WhatsApp
+                            </a>
                         </div>
-                    </div>
 
-                    <div class="pt-4 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-end gap-4">
-                        <a href="https://wa.me/50586289512?text=%C2%A1Hola!%20Estoy%20interesado%20en%20el%20pre-entreno%20The%20Curse%20de%2050%20servicios.%20%C2%BFQu%C3%A9%20sabores%20tienen%20disponibles%3F" 
-                           target="_blank" 
-                           class="w-full sm:w-auto text-center px-6 py-3 bg-red-600 text-white font-bold text-sm rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/10 uppercase tracking-wider">
-                            <i class="fa-brands fa-whatsapp mr-2"></i> Apartar por WhatsApp
-                        </a>
                     </div>
-
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
     <section id="proteinas" class="py-12 bg-stone-950 text-white">
-    <div class="max-w-5xl mx-auto px-4">
-        
-        <div class="mb-10 text-center md:text-left">
-            <h2 class="text-2xl font-black tracking-wider text-red-500 uppercase border-l-4 border-red-600 pl-3">
-                Tienda de Suplementos: Proteínas
-            </h2>
-            <p class="text-sm text-stone-400 mt-2">
-                Construye, repara y mantén tu masa muscular con la proteína de mayor calidad en el mercado.
-            </p>
-        </div>
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <div class="mb-10 text-center md:text-left">
+                <h2 class="text-2xl font-black tracking-wider text-red-500 uppercase border-l-4 border-red-600 pl-3">
+                    Tienda de Suplementos: Proteínas
+                </h2>
+                <p class="text-sm text-stone-400 mt-2">
+                    Construye, repara y mantén tu masa muscular con la proteína de mayor calidad en el mercado.
+                </p>
+            </div>
 
-        <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                
-                <div class="w-full md:w-1/3 flex justify-center bg-stone-950 p-4 rounded-lg border border-stone-800/50">
-                    <img src="GoldStandard5lb.jpg" alt="Optimum Nutrition Gold Standard 100% Whey 5lb" class="max-h-72 object-contain hover:scale-105 transition-transform duration-300">
-                </div>
-
-                <div class="w-full md:w-2/3 flex flex-col justify-between">
-                    <div>
-                        <div class="flex flex-wrap items-center gap-2 mb-2">
-                            <span class="text-xs font-bold uppercase bg-red-500/10 text-red-500 px-2.5 py-1 rounded-md border border-red-500/20">
-                                Máxima Pureza Aislada
-                            </span>
-                            <span class="text-xs font-bold uppercase bg-yellow-500/10 text-yellow-500 px-2.5 py-1 rounded-md border border-yellow-500/20">
-                                5 Libras (73 Serv.)
-                            </span>
-                        </div>
-                        
-                        <h3 class="text-2xl font-black tracking-wide text-stone-100 mb-3">
-                            100% Whey Gold Standard
-                        </h3>
-
-                        <p class="text-sm text-stone-300 leading-relaxed mb-6">
-                            Una proteína de suero de leche de alta calidad. Cada servicio te aporta proteína aislada con un mínimo de carbohidratos y grasas, perfecta para acelerar la recuperación muscular y potenciar la hipertrofia. <strong class="text-red-500">Disponible en diferentes y deliciosos sabores (consultar variedad disponible al apartar).</strong>
-                        </p>
-
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">
-                                Beneficios Destacados
-                            </h4>
-                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-300">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>24g de pura proteína por scoop para desarrollo muscular.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>Acelera la recuperación muscular. Ideal para tomar después de entrenar pesado y reducir el dolor al día siguiente.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>Fácil de tomar y digerir. Se mezcla al instante en tu shaker y no cae pesada en el estómago..</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-red-500 font-bold">✓</span>
-                                    <span>Perfecta para nutrirte efectivamente sin subir grasa.</span>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-xl p-6 md:p-8">
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    
+                    <div class="w-full md:w-1/3 flex justify-center bg-stone-950 p-4 rounded-lg border border-stone-800/50">
+                        <img src="GoldStandard5lb.jpg" alt="Optimum Nutrition Gold Standard 100% Whey 5lb" class="max-h-72 object-contain hover:scale-105 transition-transform duration-300">
                     </div>
 
-                    <div class="pt-4 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-end gap-4">
-                        <a href="https://wa.me/50586289512?text=%C2%A1Hola%20PowerGym!%20Estoy%20interesado%20en%20apartar%20la%20prote%C3%ADna%20Gold%20Standard%20de%205%20lbs.%20%C2%BFQu%C3%A9%20sabores%20tienen%20disponibles%3F" 
-                           target="_blank" 
-                           class="w-full sm:w-auto text-center px-6 py-3 bg-red-600 text-white font-bold text-sm rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/10 uppercase tracking-wider">
-                            <i class="fa-brands fa-whatsapp mr-2"></i> Apartar por WhatsApp
-                        </a>
-                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase bg-red-500/10 text-red-500 px-2.5 py-1 rounded-md border border-red-500/20">
+                                    Máxima Pureza Aislada
+                                </span>
+                                <span class="text-xs font-bold uppercase bg-yellow-500/10 text-yellow-500 px-2.5 py-1 rounded-md border border-yellow-500/20">
+                                    5 Libras (73 Serv.)
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-black tracking-wide text-stone-100 mb-3">
+                                100% Whey Gold Standard
+                            </h3>
 
+                            <p class="text-sm text-stone-300 leading-relaxed mb-6">
+                                Una proteína de suero de leche de alta calidad. Cada servicio te aporta proteína aislada con un mínimo de carbohidratos y grasas, perfecta para acelerar la recuperación muscular y potenciar la hipertrofia. <strong class="text-red-500">Disponible en diferentes y deliciosos sabores (consultar variedad disponible al apartar).</strong>
+                            </p>
+
+                            <div class="mb-6">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">
+                                    Beneficios Destacados
+                                </h4>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-300">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>24g de pura proteína por scoop para desarrollo muscular.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>Acelera la recuperación muscular. Ideal para tomar después de entrenar pesado.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>Fácil de tomar y digerir. Se mezcla al instante en tu shaker.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-red-500 font-bold">✓</span>
+                                        <span>Perfecta para nutrirte efectivamente sin subir grasa.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-end gap-4">
+                            <a href="https://wa.me/50586289512?text=%C2%A1Hola%20PowerGym!%20Estoy%20interesado%20en%20apartar%20la%20prote%C3%ADna%20Gold%20Standard%20de%205%20lbs.%20%C2%BFQu%C3%A9%20sabores%20tienen%20disponibles%3F" 
+                               target="_blank" 
+                               class="w-full sm:w-auto text-center px-6 py-3 bg-red-600 text-white font-bold text-sm rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/10 uppercase tracking-wider">
+                                <i class="fa-brands fa-whatsapp mr-2"></i> Apartar por WhatsApp
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
-   <section id="equipamiento" class="max-w-5xl mx-auto px-4 py-16">
+    <section id="equipamiento" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-20">
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-4xl font-bold text-white mb-2 uppercase tracking-wide">Equipamiento Deportivo</h2>
             <div class="w-12 h-1 bg-red-600 mx-auto rounded-full"></div>
@@ -355,7 +342,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 
-                <div class="bg-stone-900/40 p-6 rounded-xl border border-stone-900/60 flex flex-col justify-between">
+                <div class="bg-stone-900/40 p-6 rounded-xl border border-stone-800/60 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-8 h-8 bg-red-600/10 rounded-lg flex items-center justify-center text-red-500">
@@ -368,7 +355,7 @@
                         </p>
                     </div>
                     <div>
-                        <a href="https://www.google.com/maps/search/?api=1&query=PowerGym+Juigalpa" 
+                        <a href="https://maps.google.com/?q=PowerGym+Juigalpa" 
                            target="_blank" 
                            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-500 hover:text-red-400 transition-colors">
                             <span>Ver ubicación en Google Maps</span>
@@ -377,7 +364,7 @@
                     </div>
                 </div>
 
-                <div class="bg-stone-900/40 p-6 rounded-xl border border-stone-900/60">
+                <div class="bg-stone-900/40 p-6 rounded-xl border border-stone-800/60">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-8 h-8 bg-red-600/10 rounded-lg flex items-center justify-center text-red-500">
                             <i class="fa-solid fa-clock"></i>
@@ -445,7 +432,7 @@
     </section>
 
     <footer class="bg-stone-950 py-6 border-t border-stone-900 text-center text-xs text-stone-600 font-medium">
-        <p>&copy; 2026 PowerGym Juigalpa. Todos los derechos reservados.</p>
+        <p>© 2026 PowerGym Juigalpa. Todos los derechos reservados.</p>
     </footer>
 
 </body>
