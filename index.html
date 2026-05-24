@@ -13,7 +13,7 @@
         }
         .animate-wasa { animation: pulse-red 2s infinite; }
         
-        /* Asegura el comportamiento de scroll suave en navegadores antiguos */
+    
         html {
             scroll-behavior: smooth;
         }
@@ -30,10 +30,11 @@
             </span>
             
             <div class="flex gap-4 sm:gap-6 text-[11px] md:text-sm font-bold tracking-wider uppercase">
-                <a href="#inicio" class="text-stone-300 hover:text-red-500 transition-colors">Inicio</a>
-                <a href="#suplementos" class="text-stone-300 hover:text-red-500 transition-colors">Suplementos</a>
-                <a href="#equipamiento" class="text-stone-300 hover:text-red-500 transition-colors">Equipamiento</a>
-                <a href="#informacion" class="text-stone-300 hover:text-red-500 transition-colors">Gimnasio</a>
+               <a href="#inicio" class="text-stone-300 hover:text-red-500 transition-colors">Inicio</a>
+    <a href="#planes" class="text-stone-300 hover:text-red-500 transition-colors">Planes</a>
+    <a href="#suplementos" class="text-stone-300 hover:text-red-500 transition-colors">Suplementos</a>
+    <a href="#equipamiento" class="text-stone-300 hover:text-red-500 transition-colors">Equipamiento</a>
+    <a href="#informacion" class="text-stone-300 hover:text-red-500 transition-colors">Gimnasio</a>
             </div>
 
         </div>
@@ -95,7 +96,136 @@
 
         </div>
     </section>
+<section id="planes" class="py-16 bg-stone-950 text-white border-b border-stone-800 scroll-mt-20">
+        <div class="max-w-5xl mx-auto px-4">
+            
+            <div class="mb-12 text-center">
+                <span class="text-xs font-bold uppercase tracking-widest text-red-500 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
+                    Suscripciones
+                </span>
+                <h2 class="text-3xl md:text-4xl font-black tracking-wider text-stone-100 uppercase mt-3">
+                    Elige tu Plan de Entrenamiento
+                </h2>
+                <div class="w-12 h-1 bg-red-600 mx-auto rounded-full mt-3 mb-2"></div>
+                <p class="text-sm text-stone-400 max-w-md mx-auto">
+                    Sin contratos forzosos. Elige la opción que mejor se adapte a tus objetivos y empieza hoy mismo.
+                </p>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <div class="bg-stone-900/60 border border-stone-800/80 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all hover:border-stone-700">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Entrenamiento Único</h3>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-black text-white">C$ 70</span>
+                            <span class="text-xs text-stone-500 font-medium">/ día</span>
+                        </div>
+                        <p class="text-xs text-stone-400 mb-6 leading-relaxed">
+                            Ideal para personas que están de paso por Juigalpa o quieren probar la maquinaria original antes de inscribirse.
+                        </p>
+                        <ul class="space-y-3 text-xs text-stone-300 border-t border-stone-800/60 pt-4 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Acceso completo por el día</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Uso de área de peso libre y máquinas</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Lockers y duchas disponibles</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/50586289512?text=%C2%A1Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20el%20pase%20diario%20para%20entrenar." 
+                       target="_blank"
+                       class="w-full text-center py-3 border border-stone-700 bg-stone-950 text-stone-200 font-bold text-xs rounded-xl hover:bg-stone-800 transition-colors uppercase tracking-wider">
+                        Pagar Pase Diario
+                    </a>
+                </div>
+
+                <div class="relative bg-stone-900 border-2 border-red-600 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-2xl shadow-red-600/5 transform md:-translate-y-2">
+                    <span class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md animate-wasa">
+                        Recomendado
+                    </span>
+                    
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2">Mes Completo</h3>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-4xl font-black text-white">C$ 550</span>
+                            <span class="text-xs text-stone-400 font-medium">/ mes</span>
+                        </div>
+                        <p class="text-xs text-stone-300 mb-6 leading-relaxed">
+                            Nuestro plan estándar más buscado. Perfecto para mantener la disciplina y constancia en tus entrenamientos de hipertrofia.
+                        </p>
+                        <ul class="space-y-3 text-xs text-stone-200 border-t border-stone-800 pt-4 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Acceso ilimitado en todos los horarios</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Rutina e inducción inicial en sala</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Acceso preferencial a stock de suplementos</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Sin cobro de matrícula de inscripción</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/50586289512?text=%C2%A1Hola!%20Estoy%20interesado%20en%20inscribirme%20en%20el%20Plan%20Mensual%20de%20PowerGym." 
+                       target="_blank"
+                       class="w-full text-center py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors uppercase tracking-wider shadow-lg shadow-red-600/20">
+                        <i class="fa-solid fa-bolt mr-1.5"></i> Inscribirme Ahora
+                    </a>
+                </div>
+
+                <div class="bg-stone-900/60 border border-stone-800/80 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all hover:border-stone-700">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Ahorro Asegurado</h3>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-black text-white">C$ 1,450</span>
+                            <span class="text-xs text-stone-500 font-medium">/ 3 meses</span>
+                        </div>
+                        <p class="text-xs text-stone-400 mb-6 leading-relaxed">
+                            Ahorra dinero pagando 3 meses por adelantado. La opción inteligente si estás comprometido seriamente con tu cambio físico.
+                        </p>
+                        <ul class="space-y-3 text-xs text-stone-300 border-t border-stone-800/60 pt-4 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span class="font-medium text-stone-200">Ahorras C$ 200 en total</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Acceso ilimitado total por 90 días</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Seguimiento de rutina básico</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <span class="text-red-500 font-bold">✓</span>
+                                <span>Congelamiento de plan por enfermedad (7 días)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/50586289512?text=%C2%A1Hola!%20Quiero%20aprovechar%20la%20promoci%C3%B3n%20del%20Plan%20Trimestral." 
+                       target="_blank"
+                       class="w-full text-center py-3 border border-stone-700 bg-stone-950 text-stone-200 font-bold text-xs rounded-xl hover:bg-stone-800 transition-colors uppercase tracking-wider">
+                        Adquirir Trimestre
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     <section id="suplementos" class="py-12 bg-stone-950 text-white scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4">
             
