@@ -472,3 +472,35 @@ img {
 .text-red {
     color: #ef4444 !important;
 }
+/* ==========================================================================
+   9. RESPONSIVE DESIGN (ADAPTACIÓN PARA CELULARES)
+   ========================================================================== */
+
+/* Se activa automáticamente en pantallas menores a 768px (Celulares y Tablets) */
+@media (max-width: 768px) {
+    
+    .pg-navbar {
+        flex-direction: column; /* Coloca el logo arriba y los enlaces abajo */
+        gap: 15px;              /* Espacio de separación entre logo y menú */
+        padding: 15px 2%;       /* Reduce los lados para ganar espacio */
+        text-align: center;
+    }
+
+    .pg-logo-wrapper {
+        justify-content: center; /* Centra el logo y texto en móviles */
+    }
+
+    .pg-logo-text {
+        font-size: 1.4rem;       /* Achica un pelín el texto para que no sature */
+    }
+
+    .pg-nav-links {
+        justify-content: center; /* Centra los botones de Inicio, Planes, etc. */
+        gap: 15px;               /* Junta un poco más los enlaces para que quepan */
+        width: 100%;
+    }
+
+    .pg-nav-item {
+        font-size: 0.9rem;       /* Texto ligeramente más cómodo para pantallas táctiles */
+    }
+}
