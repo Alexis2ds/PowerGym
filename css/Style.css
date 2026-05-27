@@ -401,46 +401,52 @@ img {
     margin-top: 2rem;
 }
 /* ==========================================================================
-   8. ESTRUCTURA NAVBAR POWERGYM
+   8. ESTRUCTURA NAVBAR CON CONTENEDOR CIRCULAR (POWERGYM)
    ========================================================================== */
 
-/* Contenedor principal del navbar: alinea extremos usando flexbox */
 .pg-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 12px 5%;
     background-color: #121212;
-    border-bottom: 2px solid #ef4444; /* Línea roja inferior */
+    border-bottom: 2px solid #ef4444;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Envoltura del logo y el texto en una sola línea */
 .pg-logo-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px; /* Espacio entre el logo y el texto */
+    gap: 12px;
 }
 
-/* Control estricto del tamaño del logo para que NO se haga gigante */
+/* --- EL CONTENEDOR CIRCULAR (La ventana fija) --- */
+.pg-logo-container {
+    width: 50px;           /* Tamaño fijo del círculo */
+    height: 50px;          /* Debe ser igual al ancho */
+    border-radius: 50%;    /* Lo hace un círculo perfecto */
+    overflow: hidden;      /* Corta cualquier cosa que intente salirse */
+    background-color: #ffffff; /* Fondo blanco de respaldo */
+    border: 2px solid #ef4444; /* Borde rojo estético */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- LA IMAGEN ADENTRO DEL CÍRCULO --- */
 .pg-logo-img {
-    width: 45px;          /* Ancho idéntico al de un logo de barra */
-    height: 45px;         /* Alto controlado */
-    object-fit: contain;  /* Evita que se deforme */
-    background-color: #ffffff;
-    border-radius: 4px;   /* Bordes ligeramente suaves igual que Luna Ice */
+    width: 100%;           /* Se estira/encoge al 100% del contenedor */
+    height: 100%;          /* Se adapta perfectamente */
+    object-fit: contain;   /* Mantiene su proporción cuadrada sin deformarse */
 }
 
-/* Texto de la marca al lado del logo */
 .pg-logo-text {
     font-size: 1.6rem;
     font-weight: 800;
     color: #ffffff;
-    letter-spacing: 0.5px;
 }
 
-/* Menú de enlaces flotado a la derecha */
 .pg-nav-links {
     display: flex;
     gap: 25px;
@@ -449,23 +455,20 @@ img {
     padding: 0;
 }
 
-/* Items individuales del menú con hover rojo obligatorio */
 .pg-nav-item {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    color: #ffffff; /* Texto blanco base */
+    color: #ffffff;
     transition: color 0.25s ease, transform 0.2s ease;
     display: inline-block;
 }
 
-/* Efecto hover en rojo al pasar el mouse */
 .pg-nav-item:hover {
-    color: #ef4444 !important; /* Forzar el color rojo de PowerGym */
+    color: #ef4444 !important;
     transform: translateY(-1px);
 }
 
-/* Forzar color rojo del sistema */
 .text-red {
     color: #ef4444 !important;
 }
