@@ -1,1 +1,282 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES (Paleta de colores de PowerGym)
+   ========================================================================== */
+:root {
+    /* Colores de Fondo y Superficies (Oscuros) */
+    --bg-main: #121212;         /* Fondo principal de la app */
+    --bg-card: #1e1e1e;         /* Fondo de tarjetas, bloques y secciones */
+    --bg-nav: #0a0a0a;          /* Fondo del Navbar y Footer */
 
+    /* Colores de Acento (Identidad de PowerGym) */
+    --color-primary: #f59e0b;    /* Amarillo/Naranja brillante para botones, enlaces y destaques */
+    --color-primary-hover: #d97706; /* Tono más oscuro para los efectos hover */
+
+    /* Colores de Texto */
+    --text-main: #ffffff;       /* Texto principal */
+    --text-muted: #a3a3a3;      /* Texto secundario o descripciones */
+    
+    /* Tipografía y Bordes */
+    --font-sans: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+    --border-radius: 8px;
+    --transition-fast: all 0.3s ease;
+}
+
+/* ==========================================================================
+   2. ESTILOS BASE / REINICIO (Reset)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   3. NAVBAR Y MENÚ DESPLEGABLE (Dropdown de Sedes)
+   ========================================================================== */
+.navbar {
+    background-color: var(--bg-nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-item {
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    color: var(--color-primary);
+}
+
+/* Estructura del Menú Desplegable (Sedes) */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    margin-top: 0.5rem;
+    
+    /* Oculto por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition-fast);
+}
+
+/* Mostrar menú al hacer Hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #252525;
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   4. COMPONENTES REUTILIZABLES (Botones, Tarjetas, etc.)
+   ========================================================================== */
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #000000;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Tarjetas (Para planes, servicios o entrenadores) */
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    border: 1px solid #2a2a2a;
+    transition: var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+}
+/* ==========================================================================
+   5. PANTALLA DE BIENVENIDA (index.html) - Estilo Tarjeta con Imagen
+   ========================================================================== */
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.welcome-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.brand-highlight {
+    color: var(--color-primary);
+}
+
+.welcome-header p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+/* Rejilla para las 3 tarjetas */
+.sedes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* Contenedor de la Tarjeta (Inspirado en image_82340a.png) */
+.sede-card {
+    background-color: var(--bg-card);
+    border-radius: 16px; /* Bordes redondeados más notorios como tu ejemplo */
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-fast);
+}
+
+/* Contenedor estricto para la imagen */
+.sede-image-wrapper {
+    height: 240px; /* Altura fija para que los 3 cuadros midan exactamente lo mismo */
+    width: 100%;
+    overflow: hidden;
+    background-color: #252525;
+}
+
+/* La imagen se adapta sin deformarse y hace un ligero zoom en hover */
+.sede-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la foto se estire feo */
+    transition: transform 0.5s ease;
+}
+
+/* Bloque de información inferior */
+.sede-info {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-nav);
+    border-top: 1px solid #2a2a2a;
+}
+
+.sede-info h2 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.btn-select {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    transition: var(--transition-fast);
+}
+
+/* EFECOTS HOVER */
+.sede-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 30px rgba(245, 158, 11, 0.2);
+}
+
+/* Zoom suave a la foto al pasar el mouse */
+.sede-card:hover .sede-image-wrapper img {
+    transform: scale(1.06);
+}
+
+.sede-card:hover .btn-select {
+    color: var(--text-main);
+}
