@@ -333,3 +333,70 @@ img {
 .sede-card-green:hover .btn-select {
     color: #ffffff !important;
 }
+
+/* ==========================================================================
+   7. AJUSTES ESPECÍFICOS PARA LA INTERFAZ DE POWERGYM
+   ========================================================================== */
+
+/* Contenedor del logo y texto en el Navbar */
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* El logo del navbar de forma sutil y limpia */
+.nav-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #ef4444;
+}
+
+.nav-logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* Forzar color rojo base donde se necesite */
+.text-red {
+    color: #ef4444 !important;
+}
+
+/* --- CAMBIO DE HOVER AMARILLO A ROJO --- */
+.nav-item.hover-red {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item.hover-red:hover {
+    color: #ef4444 !important; /* Reemplaza el amarillo viejo */
+    transform: translateY(-2px);
+}
+
+/* Asegurar que el Hero se comporte como un bloque oscuro imponente */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 65vh;
+    padding: 4rem 2rem;
+    background-color: #121212; /* Fondo de respaldo por si no usas foto */
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos de los botones del Hero para que no salgan como texto plano */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
