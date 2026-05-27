@@ -280,3 +280,42 @@ img {
 .sede-card:hover .btn-select {
     color: var(--text-main);
 }
+/* ==========================================================================
+   6. COLORES DE IDENTIDAD PERSONALIZADOS POR SEDE
+   ========================================================================== */
+
+/* Título de bienvenida en Rojo */
+.brand-red {
+    color: #ef4444; /* Rojo vibrante */
+}
+
+/* Colores para los textos "Ingresar" */
+.text-red {
+    color: #ef4444; /* Rojo */
+}
+
+.text-pink {
+    color: #ec4899; /* Rosa */
+}
+
+.text-green {
+    color: #22c55e; /* Verde */
+}
+
+/* mouse (hover) el borde de la tarjeta 
+  brille con el color de su respectiva sucursal, agrega esto: */
+
+.sede-card:has(.text-red):hover {
+    border-color: #ef4444;
+    box-shadow: 0 12px 30px rgba(239, 68, 68, 0.2);
+}
+
+.sede-card:has(.text-pink):hover {
+    border-color: #ec4899;
+    box-shadow: 0 12px 30px rgba(236, 72, 153, 0.2);
+}
+
+.sede-card:has(.text-green):hover {
+    border-color: #22c55e;
+    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.2);
+}
