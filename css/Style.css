@@ -378,29 +378,56 @@ img {
     transform: translateY(-2px);
 }
 
-/* Asegurar que el Hero se comporte como un bloque oscuro imponente */
+/* Asegurar que el Hero se comporte como un bloque oscuro imponente con fondo */
 .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 65vh;
-    padding: 4rem 2rem;
-    background-color: #121212; /* Fondo de respaldo por si no usas foto */
+    position: relative;
+    width: 100% !important;
+    min-height: 60vh !important; 
+    background-image: url('../../img/imagenespowergym/Logogym.jpeg') !important; 
+    background-size: cover !important;       
+    background-position: center !important;   
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 4rem 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* Capa oscura intermedia (Overlay) para legibilidad */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.78) !important; /* Capa oscura para que resalten las letras */
+    z-index: 1;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Estilos de los botones del Hero para que no salgan como texto plano */
-.hero-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 2rem;
+.hero-title {
+    font-size: 3rem !important; 
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin-bottom: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem !important;
+    color: #e5e5e5 !important;
+    line-height: 1.7 !important;
+    max-width: 650px;
+    margin: 0 auto !important;
 }
 /* ==========================================================================
    8. ESTRUCTURA NAVBAR CON CONTENEDOR CIRCULAR (POWERGYM)
