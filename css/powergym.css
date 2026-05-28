@@ -252,7 +252,7 @@ body {
     }
 }
 /* ==========================================================================
-   6. SECCIÓN DE PLANES DE ENTRENAMIENTO (planes.html)
+   6. SECCIÓN DE PLANES DE ENTRENAMIENTO (planes.html) - INTEGRAL Y CORREGIDO
    ========================================================================== */
 
 .planes-section {
@@ -297,7 +297,7 @@ body {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    align-items: stretch !important;
+    align-items: stretch !important; /* Fuerza a que las 3 tarjetas midan igual de alto */
     gap: 25px !important;
     width: 100% !important;
     max-width: 1150px !important;
@@ -326,16 +326,28 @@ body {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important; 
-    justify-content: space-between !important; /* 👈 CAMBIA 'flex-start' por 'space-between' */
+    justify-content: flex-start !important; /* Volvemos a flex-start para controlar el flujo */
 }
+
+/* LA CLAVE: La descripción empuja con su margen inferior automático */
+p.plan-description {
+    font-size: 0.95rem !important;
+    color: #a3a3a3 !important;
+    line-height: 1.5 !important;
+    margin-bottom: auto !important; /* 👈 MAGIA: Empuja la lista exactamente al mismo nivel inferior */
+    flex: none !important; 
+}
+
+/* EL BLOQUE DE BENEFICIOS QUEDA ALINEADO EN LA MISMA RECTA */
 .plan-features {
     border-top: 1px solid #262626 !important;
     padding-top: 1.5rem !important;
-    margin-top: 1.5rem !important; 
+    margin-top: 2rem !important; /* Espacio uniforme desde donde termina la descripción más larga */
     width: 100% !important;
     list-style: none !important;
     padding-left: 0 !important;
 }
+
 /* TARJETA DESTACADA (MES COMPLETO) */
 .featured-card {
     border-color: #ef4444 !important;
@@ -402,16 +414,6 @@ body {
     color: #737373;
     margin-left: 6px;
 }
-
-p.plan-description {
-    font-size: 0.95rem !important;
-    color: #a3a3a3 !important;
-    line-height: 1.5 !important;
-    margin-bottom: 0 !important;
-    flex: 1 !important; 
-}
-
-/* LISTA DE CARACTERÍSTICAS (CHECKMARKS) */
 
 .feature-item {
     font-size: 0.9rem;
