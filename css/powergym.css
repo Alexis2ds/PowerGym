@@ -329,8 +329,19 @@ body {
     justify-content: flex-start !important; 
 }
 .plan-features {
-    margin-top: auto !important;
+    border-top: 1px solid #262626 !important;
+    padding-top: 1.5rem !important;
+    margin-top: 2rem !important; 
     width: 100% !important;
+    list-style: none;
+    padding-left: 0;
+}
+.plan-description {
+    font-size: 0.95rem !important;
+    color: #a3a3a3 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+    flex: 1 !important; 
 }
 /* TARJETA DESTACADA (MES COMPLETO) */
 .featured-card {
