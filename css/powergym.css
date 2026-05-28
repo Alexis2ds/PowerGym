@@ -265,39 +265,47 @@ body {
 }
 
 .planes-header {
-    text-align: center;
-    max-width: 700px;
-    margin-bottom: 5.5rem;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 4rem !important;
+    padding: 0 1.5rem !important;
+    box-sizing: border-box;
 }
 
 .planes-title {
-    font-size: 2.2rem !important;
-    font-weight: 800 !important;
     color: #ffffff !important;
-    letter-spacing: 1px;
+    font-size: 2.2rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
     margin-bottom: 0.8rem !important;
+    text-align: center !important;
 }
 
 .planes-decorator {
-    width: 50px;
-    height: 4px;
-    background-color: #ef4444;
-    margin: 0 auto 1.5rem auto;
-    border-radius: 2px;
+    width: 60px !important;
+    height: 4px !important;
+    background-color: #ef4444 !important;
+    margin: 0 auto 1.5rem auto !important;
 }
 
 .planes-subtitle {
-    font-size: 1.05rem !important;
     color: #a3a3a3 !important;
-    line-height: 1.6;
+    font-size: 1.05rem !important;
+    max-width: 650px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin: 0 auto !important;
 }
-
 /* CONTENEDOR FLEX DE TARJETAS */
 .planes-container {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    align-items: stretch !important; /* Fuerza a que las 3 tarjetas midan igual de alto */
+    align-items: stretch !important;
     gap: 25px !important;
     width: 100% !important;
     max-width: 1150px !important;
@@ -326,7 +334,7 @@ body {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important; 
-    justify-content: flex-start !important; /* Volvemos a flex-start para controlar el flujo */
+    justify-content: flex-start !important; 
 }
 
 p.plan-description {
