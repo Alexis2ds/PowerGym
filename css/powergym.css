@@ -896,69 +896,73 @@ p.plan-description {
 
 /* 📱 ENTRAR EN MODO CELULAR (Pantallas menores a 768px) */
 @media (max-width: 768px) {
-    /* Mostramos el botón hamburguesa */
-    .pg-menu-toggle {
-        display: flex;
+    /* Forzamos al Navbar a mantener el espacio separado en los extremos */
+    .pg-navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 1rem 5% !important;
+        position: relative;
     }
 
-    /* Transformamos la lista horizontal en el Panel Lateral Derecho Premium */
+    /* ☰ BOTÓN HAMBURGUESA: Se queda fijo en la esquina de la barra de navegación */
+    .pg-menu-toggle {
+        display: flex !important;
+        position: relative !important;
+        z-index: 98 !important; /* Por debajo del panel para que no se encima al abrir */
+    }
+
+    /* 🟥 PANEL LATERAL: Ahora sí se ancla perfectamente al extremo derecho (o izquierdo) */
     .pg-nav-links {
-        position: fixed;
-        top: 0;
-        right: -280px; /* Escondido por defecto a la derecha */
-        width: 280px;
-        height: 100vh;
-        background-color: #111111 !important; /* Mismo fondo oscuro rudo */
-        border-left: 3px solid #ef4444 !important; /* Línea roja de identidad izquierda */
+        position: fixed !important;
+        top: 0 !important;
+        right: -280px Im-portant; /* Escondido firmemente fuera de la pantalla */
+        width: 280px !important;
+        height: 100vh !important;
+        background-color: #111111 !important; 
+        border-left: 3px solid #ef4444 !important; 
         flex-direction: column !important;
         justify-content: flex-start !important;
-        gap: 30px !important;
-        padding: 2rem 2.5rem !important;
-        z-index: 100;
-        box-sizing: border-box;
-        transition: right 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important; /* Desplazamiento suave */
-        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.8);
+        align-items: flex-start !important; /* Alinea los textos a la izquierda del panel */
+        gap: 25px !important;
+        padding: 2rem !important;
+        z-index: 100 !important; /* Máxima prioridad de capa */
+        box-sizing: border-box !important;
+        transition: right 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.9) !important;
     }
 
-    /* Mostramos la "X" para cerrar arriba en el panel */
+    /* Si prefieres que el panel salga desde la ESQUINA IZQUIERDA en vez de la derecha:
+       Cambia arriba 'right: -280px' por 'left: -280px', 'border-left' por 'border-right',
+       y abajo en '.pg-nav-links.active' cambia 'right: 0' por 'left: 0'. */
+
+    /* CLASE ACTIVA: Desplaza el panel hacia adentro limpiamente */
+    .pg-nav-links.active {
+        right: 0 !important; 
+    }
+
+    /* CONTENEDOR DE LA "X" PARA CERRAR */
     .pg-close-wrapper {
-        display: block;
-        text-align: right;
-        width: 100%;
-        margin-bottom: 1rem;
+        display: block !important;
+        width: 100% !important;
+        text-align: right !important; /* Empuja la X a la esquina del panel */
+        margin-bottom: 1.5rem !important;
     }
 
     .pg-menu-close {
-        background: transparent;
-        border: none;
-        color: #ffffff;
-        font-size: 2.2rem;
-        cursor: pointer;
-        line-height: 1;
-        padding: 0;
-        transition: color 0.2s;
+        background: transparent !important;
+        border: none !important;
+        color: #ffffff !important;
+        font-size: 2rem !important;
+        cursor: pointer !important;
     }
 
-    .pg-menu-close:hover {
-        color: #ef4444;
-    }
-
-    /* Estilos de los enlaces dentro del menú móvil */
+    /* Ajuste de los ítems de menú dentro del panel */
     .pg-nav-item {
         font-size: 1.2rem !important;
-        display: block;
-        width: 100%;
-        padding: 5px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    /* 🔥 CLASES ACTIVAS (Se activan con JavaScript al dar clic) */
-    .pg-nav-links.active {
-        right: 0; /* Desplaza el menú hacia adentro de la pantalla */
-    }
-
-    .pg-menu-overlay.active {
-        opacity: 1;
-        pointer-events: auto;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 8px 0 !important;
+        display: block !important;
     }
 }
