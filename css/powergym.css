@@ -334,18 +334,19 @@ p.plan-description {
     font-size: 0.95rem !important;
     color: #a3a3a3 !important;
     line-height: 1.5 !important;
-    margin-bottom: auto !important; /* 👈 MAGIA: Empuja la lista exactamente al mismo nivel inferior */
-    flex: none !important; 
+    margin-bottom: 0 !important; /* 👈 Volvemos a cero para que no empuje */
+    flex: 1 !important;          /* 👈 Esto hace que el contenedor del texto ocupe el mismo alto en las tres tarjetas */
 }
 
 /* EL BLOQUE DE BENEFICIOS QUEDA ALINEADO EN LA MISMA RECTA */
 .plan-features {
     border-top: 1px solid #262626 !important;
     padding-top: 1.5rem !important;
-    margin-top: 2rem !important; /* Espacio uniforme desde donde termina la descripción más larga */
+    margin-top: 1.5rem !important; /* Espacio limpio desde el bloque de texto */
     width: 100% !important;
     list-style: none !important;
     padding-left: 0 !important;
+    flex: none !important;        /* 👈 EVITA que la lista se estire. Se queda fija con sus elementos */
 }
 
 /* TARJETA DESTACADA (MES COMPLETO) */
