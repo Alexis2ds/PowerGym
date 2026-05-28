@@ -1075,3 +1075,30 @@ p.plan-description {
         pointer-events: auto !important;
     }
 }
+/* ==========================================================================
+       📦 AJUSTE DE CONTENEDORES Y TARJETAS EN CELULAR
+       ========================================================================== */
+    
+    /* 1. Forzar a los contenedores principales a no desbordar y darles padding lateral */
+    .container, 
+    section, 
+    main,
+    .pg-services-section { /* 💡 Agrega aquí la clase exacta de tu sección si se llama distinto */
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 5% !important;  /* Margen interno izquierdo idéntico al del Navbar */
+        padding-right: 5% !important; /* Margen interno derecho idéntico al del Navbar */
+        box-sizing: border-box !important; /* Evita que el padding sume tamaño extra */
+    }
+
+    /* 2. Hacer que las tarjetas de Maquinaria y Suplementos sean 100% adaptables */
+    .card, 
+    .pg-card,
+    .info-box,
+    div[class*="card"] { /* 💡 Este selector agarra automáticamente cualquier clase que use la palabra 'card' */
+        width: 100% !important;      /* Ocupa todo el ancho disponible del contenedor padre */
+        max-width: 100% !important;
+        margin-left: 0 !important;   /* Resetea márgenes externos que descentren la caja */
+        margin-right: 0 !important;
+        box-sizing: border-box !important; /* Asegura que los bordes se queden por dentro */
+    }
