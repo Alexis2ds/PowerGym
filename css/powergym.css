@@ -479,7 +479,9 @@ p.plan-description {
         align-items: center !important;
         gap: 35px !important;
     }
-
+.featured-card {
+    margin-top: 1.5rem !important;
+}
     .plan-card, .featured-card {
         width: 100% !important;
         max-width: 360px !important;
