@@ -90,14 +90,12 @@ body {
 .hero-section {
     background: url('../img/imagenespowergym/fondopower.png') no-repeat center center !important;
     background-size: cover !important;
-    filter: brightness(1.4) contrast(1.1) !important;
+    
+    /* 🔴 PRUEBA DE FUEGO: Si el CSS funciona, el fondo se pondrá rojo brillante de golpe */
+    background-color: red !important; 
+    
     height: 80vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    position: relative;
+    /* ... resto de tu código ... */
 }
 
 .hero-overlay {
