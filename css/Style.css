@@ -383,7 +383,7 @@ img {
     position: relative;
     width: 100% !important;
     min-height: 60vh !important; 
-    background-image: url('../../img/imagenespowergym/Logogym.jpeg') !important; 
+    background-image: url('../img/imagenespowergym/Logogym.jpeg') !important; 
     background-size: cover !important;       
     background-position: center !important;   
     background-repeat: no-repeat !important;
