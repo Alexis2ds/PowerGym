@@ -297,14 +297,13 @@ body {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    align-items: flex-start !important;
+    align-items: stretch !important;
     gap: 25px !important;
     width: 100% !important;
     max-width: 1150px !important;
     box-sizing: border-box;
 }
 
-/* TARJETA BASE */
 .plan-card {
     background-color: #141414 !important;
     border: 2px solid #222222 !important;
@@ -315,20 +314,21 @@ body {
     position: relative;
     box-sizing: border-box;
     transition: transform 0.3s ease;
-}
-
-.plan-card:hover {
-    transform: translateY(-5px);
+    
+    display: flex !important;
+    flex-direction: column !important; 
 }
 
 .plan-card-content {
     padding: 2.5rem 2rem !important;
-}
+    flex: 1 !important;
+    display: flex !important;
+    flex-dir
 
 /* TARJETA DESTACADA (MES COMPLETO) */
 .featured-card {
-    border-color: #ef4444 !important; /* Borde rojo */
-    background-color: #161212 !important; /* Un toque sutil rojizo de fondo */
+    border-color: #ef4444 !important;
+    background-color: #161212 !important;
     transform: scale(1.03);
 }
 
