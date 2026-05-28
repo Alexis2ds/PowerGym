@@ -336,13 +336,6 @@ body {
     list-style: none;
     padding-left: 0;
 }
-.plan-description {
-    font-size: 0.95rem !important;
-    color: #a3a3a3 !important;
-    line-height: 1.5 !important;
-    margin-bottom: 0 !important;
-    flex: 1 !important; 
-}
 /* TARJETA DESTACADA (MES COMPLETO) */
 .featured-card {
     border-color: #ef4444 !important;
@@ -411,11 +404,11 @@ body {
 }
 
 .plan-description {
-    font-size: 0.95rem;
-    color: #a3a3a3;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    min-height: 70px; /* Mantiene la alineación uniforme */
+    font-size: 0.95rem !important;
+    color: #a3a3a3 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+    flex: 1 !important; 
 }
 
 /* LISTA DE CARACTERÍSTICAS (CHECKMARKS) */
