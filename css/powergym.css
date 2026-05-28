@@ -940,40 +940,50 @@ p.plan-description {
 
 
 /* ==========================================================================
-   📱 MEDIA QUERY: ENTRAR EN MODO CELULAR (PANTALLAS MENORES A 768PX)
+   📱 MEDIA QUERY: ENTRAR EN MODO CELULAR (CORRECCIÓN LOGO Y BOTÓN IZQUIERDA)
    ========================================================================== */
 @media (max-width: 768px) {
     .pg-navbar {
         display: flex !important;
-        flex-direction: row !important; /* Volvemos al flujo normal de izquierda a derecha */
-        justify-content: space-between !important;
+        flex-direction: row !important;     /* Flujo normal */
+        justify-content: center !important; /* 🔥 CENTRA EL LOGO PERFECTAMENTE */
         align-items: center !important;
         padding: 1rem 5% !important;
-        position: relative !important;
+        position: relative !important;      /* Base para el botón absoluto */
         width: 100% !important;
         box-sizing: border-box !important;
+        height: 70px !important;            /* Altura fija para que no varíe */
     }
 
-    /* ☰ BOTÓN HAMBURGUESA: Forzado a ir al inicio (Extremo Izquierdo) */
+    /* ☰ BOTÓN HAMBURGUESA: Flota a la izquierda de forma independiente */
     .pg-menu-toggle {
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
-        width: 30px !important;       
-        height: 20px !important;      
+        width: 28px !important;       
+        height: 18px !important;      
         background: transparent !important;
         border: none !important;
         cursor: pointer !important;
         padding: 0 !important;
         z-index: 98 !important; 
-        order: 1 !important;         /* 💡 Primero en la fila: Esquina Izquierda */
-        margin-left: 0 !important;
-        margin-right: 0 !important;  /* Reseteamos márgenes problemáticos */
+        
+        /* 🔥 Posicionamiento absoluto para no empujar al logo */
+        position: absolute !important;
+        left: 5% !important;          /* Alineado con el padding general */
+        top: 50% !important;
+        transform: translateY(-50%) !important; /* Centrado vertical impecable */
+        
+        margin: 0 !important;
     }
 
-    /* 🔥 EL LOGO: Forzado a ir al final (Extremo Derecho) */
+    /* 🟥 EL LOGO: Ahora se alinea al centro sin interferencias */
     .pg-logo-wrapper {
-        order: 2 !important;         /* 💡 Segundo en la fila: Esquina Derecha */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        order: unset !important; /* Resetea herencias previas */
     }
 
     /* Dibujo independiente de cada una de las 3 líneas */
@@ -986,7 +996,7 @@ p.plan-description {
         transition: all 0.3s ease !important;
     }
 
-    /* 🟥 PANEL LATERAL: Escondido de forma inicial a la izquierda */
+    /* PANEL LATERAL: Escondido de forma inicial a la izquierda */
     .pg-nav-links {
         position: fixed !important;
         top: 0 !important;
@@ -1008,7 +1018,7 @@ p.plan-description {
         box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9) !important;
     }
 
-    /* CLASE ACTIVA: Desplaza el panel hacia adentro desde la izquierda */
+    /* CLASE ACTIVA: Desplaza el panel hacia adentro */
     .pg-nav-links.active {
         left: 0 !important; 
     }
@@ -1019,7 +1029,6 @@ p.plan-description {
         width: 100% !important;
         text-align: right !important; 
         margin-bottom: 1.5rem !important;
-        order: 0 !important; /* Mantiene la X arriba en su sitio */
     }
 
     .pg-menu-close {
@@ -1036,7 +1045,7 @@ p.plan-description {
         color: #ef4444 !important;
     }
 
-    /* Ítems del menú vertical dentro del panel celular */
+    /* Ítems del menú vertical */
     .pg-nav-item {
         font-size: 1.2rem !important;
         width: 100% !important;
