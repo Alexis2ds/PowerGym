@@ -87,12 +87,10 @@ body {
     font-weight: 700 !important;
 }
 
-/* 3. BIENVENIDA / HERO SECTION (Con imagen de fondo) */
 .hero-section {
-    /* 💡 Bajamos la opacidad a 0.35 y 0.45 para dejar pasar mucha más luz de la foto */
-    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), 
-                url('../img/imagenespowergym/fondopower.png') no-repeat center center !important;
+    background: url('../img/imagenespowergym/fondopower.png') no-repeat center center !important;
     background-size: cover !important;
+    filter: brightness(1.4) contrast(1.1) !important;
     height: 80vh !important;
     display: flex !important;
     flex-direction: column !important;
