@@ -144,3 +144,10 @@ p, .welcome-subtitle {
         max-width: 340px !important;
     }
 }
+/* ==========================================================================
+   COLOR ROJO DEL TÍTULO PRINCIPAL
+   ========================================================================== */
+.marca-roja {
+    color: #ef4444 !important;
+    display: inline !important;
+}
