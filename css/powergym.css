@@ -850,51 +850,8 @@ p.plan-description {
     }
 }
 /* ==========================================================================
-   ESTILOS ADAPTATIVOS PARA MÓVIL (MENÚ COLAPSABLE HAMBURGUESA)
+   📱 ENTRAR EN MODO CELULAR (PANTALLAS MENORES A 768PX) - CORREGIDO
    ========================================================================== */
-
-/* Botón Hamburguesa - Oculto en PC */
-.pg-menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 101;
-}
-
-.pg-menu-toggle span {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* El botón de cerrar ("X") oculto en PC */
-.pg-close-wrapper {
-    display: none;
-}
-
-/* Capa de fondo oscura opcional */
-.pg-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 99;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-/* 📱 ENTRAR EN MODO CELULAR (Pantallas menores a 768px) */
 @media (max-width: 768px) {
     /* Forzamos al Navbar a mantener el espacio separado en los extremos */
     .pg-navbar {
@@ -902,50 +859,48 @@ p.plan-description {
         justify-content: space-between !important;
         align-items: center !important;
         padding: 1rem 5% !important;
-        position: relative;
+        position: relative !important;
     }
 
-    /* ☰ BOTÓN HAMBURGUESA: Se queda fijo en la esquina de la barra de navegación */
+    /* ☰ BOTÓN HAMBURGUESA: Fijo arriba en la barra listo para el clic */
     .pg-menu-toggle {
         display: flex !important;
         position: relative !important;
-        z-index: 98 !important; /* Por debajo del panel para que no se encima al abrir */
+        z-index: 98 !important; 
     }
 
-    /* 🟥 PANEL LATERAL: Ahora sí se ancla perfectamente al extremo derecho (o izquierdo) */
+    /* 🟥 PANEL LATERAL: Escondido correctamente a la IZQUIERDA */
     .pg-nav-links {
         position: fixed !important;
         top: 0 !important;
-        right: -280px Im-portant; /* Escondido firmemente fuera de la pantalla */
+        left: -280px !important; /* 💡 Corregido: Esconde el menú hacia la izquierda */
+        right: auto !important;  /* Resetea cualquier propiedad right previa */
         width: 280px !important;
         height: 100vh !important;
         background-color: #111111 !important; 
-        border-left: 3px solid #ef4444 !important; 
+        border-right: 3px solid #ef4444 !important; /* Borde rojo estético al cerrar el panel */
+        border-left: none !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
-        align-items: flex-start !important; /* Alinea los textos a la izquierda del panel */
+        align-items: flex-start !important; 
         gap: 25px !important;
         padding: 2rem !important;
-        z-index: 100 !important; /* Máxima prioridad de capa */
+        z-index: 100 !important; /* Capa superior para que tape el hero */
         box-sizing: border-box !important;
-        transition: right 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important;
-        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.9) !important;
+        transition: left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important; /* Animación fluida */
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9) !important;
     }
 
-    /* Si prefieres que el panel salga desde la ESQUINA IZQUIERDA en vez de la derecha:
-       Cambia arriba 'right: -280px' por 'left: -280px', 'border-left' por 'border-right',
-       y abajo en '.pg-nav-links.active' cambia 'right: 0' por 'left: 0'. */
-
-    /* CLASE ACTIVA: Desplaza el panel hacia adentro limpiamente */
+    /* 🔥 CLASE ACTIVA: Activada por JS para meter el panel a la pantalla */
     .pg-nav-links.active {
-        right: 0 !important; 
+        left: 0 !important; 
     }
 
     /* CONTENEDOR DE LA "X" PARA CERRAR */
     .pg-close-wrapper {
         display: block !important;
         width: 100% !important;
-        text-align: right !important; /* Empuja la X a la esquina del panel */
+        text-align: right !important; /* Empuja la X a la esquina derecha interna del panel */
         margin-bottom: 1.5rem !important;
     }
 
@@ -955,6 +910,12 @@ p.plan-description {
         color: #ffffff !important;
         font-size: 2rem !important;
         cursor: pointer !important;
+        padding: 0 !important;
+        line-height: 1 !important;
+    }
+
+    .pg-menu-close:hover {
+        color: #ef4444 !important;
     }
 
     /* Ajuste de los ítems de menú dentro del panel */
@@ -964,5 +925,6 @@ p.plan-description {
         text-align: left !important;
         padding: 8px 0 !important;
         display: block !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 }
