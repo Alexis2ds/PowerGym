@@ -28,8 +28,6 @@ h1, .welcome-title {
     margin-top: 3rem;
     margin-bottom: 0.5rem;
     color: #ffffff;
-   h1 span, .welcome-title span {
-    color: #ef4444 !important; /* Pinta de rojo la palabra dentro del span */
 }
 
 p, .welcome-subtitle {
