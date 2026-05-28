@@ -328,13 +328,13 @@ body {
     flex-direction: column !important;
     justify-content: flex-start !important; 
 }
-.plan-features {
+ul.plan-features {
     border-top: 1px solid #262626 !important;
     padding-top: 1.5rem !important;
-    margin-top: 2rem !important; 
+    margin-top: 2rem !important;
     width: 100% !important;
-    list-style: none;
-    padding-left: 0;
+    list-style: none !important;
+    padding-left: 0 !important;
 }
 /* TARJETA DESTACADA (MES COMPLETO) */
 .featured-card {
