@@ -637,3 +637,15 @@ img {
         max-width: 400px !important;
     }
 } 
+/* ==========================================================================
+   CORRECCIÓN PARA MANTENER SUCURSALES EN HORIZONTAL (PÁGINA INICIO)
+   ========================================================================== */
+
+/* Buscamos el contenedor que tiene las tarjetas de sucursales */
+.main-container { /* Reemplaza .main-container si el nombre de la clase es diferente en tu HTML */
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza la alineación horizontal */
+    flex-wrap: wrap !important;     /* Permite que bajen si no caben en pantalla */
+    justify-content: center !important; /* Centra las tarjetas */
+    gap: 30px !important;            /* Mantiene la separación */
+}
