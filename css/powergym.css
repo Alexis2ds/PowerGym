@@ -89,19 +89,16 @@ body {
 
 /* 3. BIENVENIDA / HERO SECTION (Con imagen de fondo) */
 .hero-section {
-    position: relative;
-    width: 100% !important;
-    min-height: 60vh !important; 
-    background-image: url('../img/imagenespowergym/Logogym.jpeg') !important; /* Ruta corregida desde la carpeta css/ */
-    background-size: cover !important;       
-    background-position: center !important;   
-    background-repeat: no-repeat !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('../../img/imagenespowergym/fondopower.png') no-repeat center center !important;
+    background-size: cover !important; /* Estira la foto perfectamente sin deformarla */
+    height: 80vh !important; /* Altura ideal en pantalla */
     display: flex !important;
-    align-items: center !important;
+    flex-direction: column !important;
     justify-content: center !important;
+    align-items: center !important;
     text-align: center !important;
-    padding: 4rem 20px !important;
-    box-sizing: border-box !important;
+    position: relative;
 }
 
 .hero-overlay {
