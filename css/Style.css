@@ -504,3 +504,94 @@ img {
         font-size: 0.9rem;       /* Texto ligeramente más cómodo para pantallas táctiles */
     }
 }
+/* ==========================================================================
+   10. SECCIÓN INFORMACIÓN GENERAL (POWERGYM)
+   ========================================================================== */
+
+/* Fondo de la sección y centrado global */
+.pg-info-section {
+    background-color: #0c0c0c;
+    padding: 5rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Grid/Flex que alinea las 3 tarjetas en horizontal */
+.pg-info-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite bajar las tarjetas si la pantalla se achica */
+}
+
+/* Estilo individual de cada contenedor */
+.pg-info-card {
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    padding: 2rem;
+    flex: 1;
+    min-width: 280px; /* Evita que se compriman demasiado */
+    max-width: 360px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto interactivo al pasar el mouse por encima */
+.pg-info-card:hover {
+    transform: translateY(-5px);
+    border-color: #ef4444; /* Brillo rojo */
+    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.1);
+}
+
+/* Encabezado interno: Alinea la foto y el título horizontalmente */
+.pg-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.2rem;
+}
+
+/* Mini imágenes al lado de los títulos */
+.pg-card-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ef4444; /* Marco rojo delgado */
+}
+
+/* Títulos de las tarjetas */
+.pg-card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Descripciones de los servicios */
+.pg-card-desc {
+    font-size: 0.95rem;
+    color: #a3a3a3;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- ADAPTACIÓN RESPONSIVE AUTOMÁTICA PARA MÓVILES --- */
+@media (max-width: 768px) {
+    .pg-info-section {
+        padding: 3rem 5%;
+    }
+    .pg-info-container {
+        flex-direction: column; /* Apila las tarjetas verticalmente en celulares */
+        align-items: center;
+    }
+    .pg-info-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
