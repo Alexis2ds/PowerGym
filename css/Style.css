@@ -505,118 +505,106 @@ img {
     }
 }
 /* ==========================================================================
-   10. SECCIÓN INFORMACIÓN GENERAL (POWERGYM)
+   10. SECCIÓN INFORMACIÓN GENERAL (POWERGYM) - COMPUTA
    ========================================================================== */
 
-/* Fondo de la sección y centrado global */
 .pg-info-section {
-    background-color: #0c0c0c;
-    padding: 5rem 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+    background-color: #0c0c0c !important;
+    padding: 5rem 5% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* Grid/Flex que alinea las 3 tarjetas en horizontal */
 .pg-info-container {
-    display: flex;
-    gap: 30px;
-    max-width: 1200px;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite bajar las tarjetas si la pantalla se achica */
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza la fila horizontal en PC */
+    gap: 30px !important;
+    max-width: 1200px !important;
+    width: 100% !important;
+    justify-content: center !important;
 }
 
-/* Estilo individual de cada contenedor */
 .pg-info-card {
-    background-color: #161616;
-    border: 1px solid #262626;
-    border-radius: 8px;
-    padding: 2rem;
-    flex: 1;
-    min-width: 280px; /* Evita que se compriman demasiado */
-    max-width: 360px;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #161616 !important;
+    border: 1px solid #262626 !important;
+    border-radius: 8px !important;
+    padding: 2rem !important;
+    flex: 1 !important;
+    min-width: 280px !important;
+    max-width: 360px !important;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efecto interactivo al pasar el mouse por encima */
 .pg-info-card:hover {
-    transform: translateY(-5px);
-    border-color: #ef4444; /* Brillo rojo */
-    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.1);
+    transform: translateY(-5px) !important;
+    border-color: #ef4444 !important;
 }
 
-/* Encabezado interno: Alinea la foto y el título horizontalmente */
 .pg-card-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 1.2rem;
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-bottom: 1.2rem !important;
 }
 
-/* Mini imágenes al lado de los títulos */
-.pg-card-icon {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #ef4444; /* Marco rojo delgado */
-}
-
-/* Títulos de las tarjetas */
-.pg-card-title {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0;
-}
-
-/* Descripciones de los servicios */
-.pg-card-desc {
-    font-size: 0.95rem;
-    color: #a3a3a3;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* --- ADAPTACIÓN RESPONSIVE AUTOMÁTICA PARA MÓVILES --- */
-@media (max-width: 768px) {
-    .pg-info-section {
-        padding: 3rem 5%;
-    }
-    .pg-info-container {
-        flex-direction: column; /* Apila las tarjetas verticalmente en celulares */
-        align-items: center;
-    }
-    .pg-info-card {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-/* --- NUEVOS ESTILOS PARA ICONOS VECTORIALES --- */
 .pg-card-icon-new {
-    font-size: 1.8rem !important; /* Tamaño ideal para el navbar/tarjeta */
-    color: #ef4444 !important;    /* Rojo PowerGym directo sin marcos */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
+    font-size: 1.8rem !important;
+    color: #ef4444 !important;
+    width: 40px !important;
 }
 
-/* --- ENLACES EN ROJO Y NEGRITA --- */
+.pg-card-title {
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+}
+
+.pg-card-desc {
+    font-size: 0.95rem !important;
+    color: #a3a3a3 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
 .pg-card-link {
     color: #ef4444 !important;
-    text-decoration: none;
-    font-weight: 700;          /* Negrita imponente */
-    display: inline-block;
-    margin-top: 5px;
-    transition: text-shadow 0.2s ease, transform 0.2s ease;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+    margin-top: 5px !important;
 }
 
-/* Efecto hover sutil al pasar el mouse sobre el enlace */
-.pg-card-link:hover {
-    text-shadow: 0 0 8px rgba(239, 68, 68, 0.5); /* Reflejo brillante */
-    transform: translateX(2px);                 /* Desplazamiento dinámico */
-}
+
+/* ==========================================================================
+   11. RESPONSIVE DESIGN (SÓLO ADAPTACIÓN PARA MÓVILES)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    
+    /* El Navbar se adapta a móvil */
+    .pg-navbar {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+
+    .pg-nav-links {
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    /* Las tarjetas se apilan una abajo de la otra en vertical sólo en celular */
+    .pg-info-container {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .pg-info-card {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+} 
