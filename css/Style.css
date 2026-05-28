@@ -595,3 +595,28 @@ img {
         max-width: 400px;
     }
 }
+/* --- NUEVOS ESTILOS PARA ICONOS VECTORIALES --- */
+.pg-card-icon-new {
+    font-size: 1.8rem !important; /* Tamaño ideal para el navbar/tarjeta */
+    color: #ef4444 !important;    /* Rojo PowerGym directo sin marcos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+
+/* --- ENLACES EN ROJO Y NEGRITA --- */
+.pg-card-link {
+    color: #ef4444 !important;
+    text-decoration: none;
+    font-weight: 700;          /* Negrita imponente */
+    display: inline-block;
+    margin-top: 5px;
+    transition: text-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto hover sutil al pasar el mouse sobre el enlace */
+.pg-card-link:hover {
+    text-shadow: 0 0 8px rgba(239, 68, 68, 0.5); /* Reflejo brillante */
+    transform: translateX(2px);                 /* Desplazamiento dinámico */
+}
