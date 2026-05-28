@@ -82,8 +82,9 @@ body {
 .pg-nav-item:hover {
     color: #ef4444;
 }
-.pg-nav-item.pg-active {
+.pg-nav-links li a.pg-nav-item.pg-active {
     color: #ef4444 !important;
+    font-weight: 700 !important;
 }
 
 /* 3. BIENVENIDA / HERO SECTION (Con imagen de fondo) */
