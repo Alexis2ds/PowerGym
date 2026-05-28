@@ -88,10 +88,10 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-                url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd') no-repeat center center !important;
-    background-size: cover !important; /* Estira la foto perfectamente sin deformarla */
-    height: 80vh !important; /* Altura ideal en pantalla */
+    background: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd') no-repeat center center !important;
+    /* Si vas a usar la local recuerda cambiarla por: url('../img/imagenespowergym/fondopower.png') no-repeat center center !important; */
+    background-size: cover !important; 
+    height: 80vh !important; 
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -106,10 +106,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.72) !important; /* Capa oscura para que el texto blanco resalte */
+    background: rgba(0, 0, 0, 0.35) !important; 
+    
     z-index: 1;
 }
-
 .hero-content {
     position: relative;
     z-index: 2;
