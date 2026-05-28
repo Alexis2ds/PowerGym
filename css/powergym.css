@@ -943,9 +943,9 @@ p.plan-description {
    📱 MEDIA QUERY: ENTRAR EN MODO CELULAR (PANTALLAS MENORES A 768PX)
    ========================================================================== */
 @media (max-width: 768px) {
- .pg-navbar {
+    .pg-navbar {
         display: flex !important;
-        flex-direction: row-reverse !important;
+        flex-direction: row !important; /* Volvemos al flujo normal de izquierda a derecha */
         justify-content: space-between !important;
         align-items: center !important;
         padding: 1rem 5% !important;
@@ -954,8 +954,8 @@ p.plan-description {
         box-sizing: border-box !important;
     }
 
-    /* ☰ BOTÓN HAMBURGUESA: Configuración de dimensiones y flex vertical para las líneas */
-   .pg-menu-toggle {
+    /* ☰ BOTÓN HAMBURGUESA: Forzado a ir al inicio (Extremo Izquierdo) */
+    .pg-menu-toggle {
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -966,16 +966,22 @@ p.plan-description {
         cursor: pointer !important;
         padding: 0 !important;
         z-index: 98 !important; 
+        order: 1 !important;         /* 💡 Primero en la fila: Esquina Izquierda */
         margin-left: 0 !important;
-        margin-right: auto !important; 
+        margin-right: 0 !important;  /* Reseteamos márgenes problemáticos */
+    }
+
+    /* 🔥 EL LOGO: Forzado a ir al final (Extremo Derecho) */
+    .pg-logo-wrapper {
+        order: 2 !important;         /* 💡 Segundo en la fila: Esquina Derecha */
     }
 
     /* Dibujo independiente de cada una de las 3 líneas */
     .pg-menu-toggle span {
         display: block !important;
         width: 100% !important;
-        height: 3px !important;      /* Grosor de cada barra */
-        background-color: #ffffff !important; /* Blanco sólido */
+        height: 3px !important;      
+        background-color: #ffffff !important; 
         border-radius: 2px !important;
         transition: all 0.3s ease !important;
     }
@@ -984,19 +990,19 @@ p.plan-description {
     .pg-nav-links {
         position: fixed !important;
         top: 0 !important;
-        left: -280px !important; /* Escondido */
+        left: -280px !important; 
         right: auto !important;  
         width: 280px !important;
         height: 100vh !important;
         background-color: #111111 !important; 
-        border-right: 3px solid #ef4444 !important; /* Línea roja de identidad */
+        border-right: 3px solid #ef4444 !important; 
         border-left: none !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: flex-start !important; 
         gap: 25px !important;
         padding: 2rem !important;
-        z-index: 100 !important; /* Capa por encima de todo */
+        z-index: 100 !important; 
         box-sizing: border-box !important;
         transition: left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important;
         box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9) !important;
@@ -1013,6 +1019,7 @@ p.plan-description {
         width: 100% !important;
         text-align: right !important; 
         margin-bottom: 1.5rem !important;
+        order: 0 !important; /* Mantiene la X arriba en su sitio */
     }
 
     .pg-menu-close {
