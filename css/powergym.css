@@ -403,7 +403,7 @@ body {
     margin-left: 6px;
 }
 
-.plan-description {
+p.plan-description {
     font-size: 0.95rem !important;
     color: #a3a3a3 !important;
     line-height: 1.5 !important;
@@ -412,13 +412,6 @@ body {
 }
 
 /* LISTA DE CARACTERÍSTICAS (CHECKMARKS) */
-.plan-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid #262626;
-    padding-top: 1.5rem;
-}
 
 .feature-item {
     font-size: 0.9rem;
