@@ -971,34 +971,55 @@ p.plan-description {
 
 
 /* ==========================================================================
-   📱 MEDIA QUERY: ENTRAR EN MODO CELULAR (Pantallas menores a 768px)
+   📱 ENTRAR EN MODO CELULAR - CORRECCIÓN DE LÍNEAS Y ALINEACIÓN
    ========================================================================== */
 @media (max-width: 768px) {
+    /* Forzamos al Navbar a estirar los elementos a los extremos */
     .pg-navbar {
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
         padding: 1rem 5% !important;
         position: relative !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* Activamos las 3 líneas en el cel */
+    /* ☰ BOTÓN HAMBURGUESA: Le damos tamaño real y orden flex vertical */
     .pg-menu-toggle {
         display: flex !important;
-        position: relative !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 30px !important;  /* Ancho del botón */
+        height: 20px !important; /* Alto del botón para dar espacio a las 3 líneas */
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 0 !important;
         z-index: 98 !important; 
+        margin-left: auto !important; /* Empuja el botón firmemente a la derecha */
     }
 
-    /* 🟥 EL PANEL: Ahora sí inicia escondido a la IZQUIERDA (-280px) */
+    /* 🔥 AQUÍ SE DIBUJAN LAS 3 LÍNEAS BLANCAS INDEPENDIENTES */
+    .pg-menu-toggle span {
+        display: block !important;
+        width: 100% !important;
+        height: 3px !important;
+        background-color: #ffffff !important; /* Color blanco rudo para que resalte */
+        border-radius: 2px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* 🟥 PANEL LATERAL: Escondido correctamente a la izquierda */
     .pg-nav-links {
         position: fixed !important;
         top: 0 !important;
-        left: -280px !important; /* Escondido a la izquierda de la pantalla */
+        left: -280px !important; 
         right: auto !important;  
         width: 280px !important;
         height: 100vh !important;
         background-color: #111111 !important; 
-        border-right: 3px solid #ef4444 !important; /* Detalle de borde rojo */
+        border-right: 3px solid #ef4444 !important; 
         border-left: none !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
@@ -1007,16 +1028,16 @@ p.plan-description {
         padding: 2rem !important;
         z-index: 100 !important; 
         box-sizing: border-box !important;
-        transition: left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important; /* Desplazamiento fluido */
+        transition: left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important; 
         box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9) !important;
     }
 
-    /* 🔥 CUANDO SE ABRE: Desplaza el panel a la posición visible (0) */
+    /* CLASE ACTIVA: Mete el panel a la pantalla */
     .pg-nav-links.active {
         left: 0 !important; 
     }
 
-    /* Botón de cerrar "X" dentro del panel */
+    /* CONTENEDOR DE LA "X" PARA CERRAR */
     .pg-close-wrapper {
         display: block !important;
         width: 100% !important;
@@ -1034,7 +1055,11 @@ p.plan-description {
         line-height: 1 !important;
     }
 
-    /* Estilos verticales para los links */
+    .pg-menu-close:hover {
+        color: #ef4444 !important;
+    }
+
+    /* Ajuste de los ítems de menú dentro del panel */
     .pg-nav-item {
         font-size: 1.2rem !important;
         width: 100% !important;
@@ -1042,11 +1067,5 @@ p.plan-description {
         padding: 8px 0 !important;
         display: block !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-    }
-
-    /* Muestra el fondo oscuro exterior */
-    .pg-menu-overlay.active {
-        opacity: 1 !important;
-        pointer-events: auto !important;
     }
 }
