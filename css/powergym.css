@@ -88,14 +88,16 @@ body {
 }
 
 .hero-section {
-    background: url('../img/imagenespowergym/fondopower.png') no-repeat center center !important;
-    background-size: cover !important;
-    
-    /* 🔴 PRUEBA DE FUEGO: Si el CSS funciona, el fondo se pondrá rojo brillante de golpe */
-    background-color: red !important; 
-    
-    height: 80vh !important;
-    /* ... resto de tu código ... */
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd') no-repeat center center !important;
+    background-size: cover !important; /* Estira la foto perfectamente sin deformarla */
+    height: 80vh !important; /* Altura ideal en pantalla */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    position: relative;
 }
 
 .hero-overlay {
