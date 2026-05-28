@@ -849,3 +849,116 @@ p.plan-description {
         width: 100% !important;
     }
 }
+/* ==========================================================================
+   ESTILOS ADAPTATIVOS PARA MÓVIL (MENÚ COLAPSABLE HAMBURGUESA)
+   ========================================================================== */
+
+/* Botón Hamburguesa - Oculto en PC */
+.pg-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.pg-menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* El botón de cerrar ("X") oculto en PC */
+.pg-close-wrapper {
+    display: none;
+}
+
+/* Capa de fondo oscura opcional */
+.pg-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* 📱 ENTRAR EN MODO CELULAR (Pantallas menores a 768px) */
+@media (max-width: 768px) {
+    /* Mostramos el botón hamburguesa */
+    .pg-menu-toggle {
+        display: flex;
+    }
+
+    /* Transformamos la lista horizontal en el Panel Lateral Derecho Premium */
+    .pg-nav-links {
+        position: fixed;
+        top: 0;
+        right: -280px; /* Escondido por defecto a la derecha */
+        width: 280px;
+        height: 100vh;
+        background-color: #111111 !important; /* Mismo fondo oscuro rudo */
+        border-left: 3px solid #ef4444 !important; /* Línea roja de identidad izquierda */
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        gap: 30px !important;
+        padding: 2rem 2.5rem !important;
+        z-index: 100;
+        box-sizing: border-box;
+        transition: right 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important; /* Desplazamiento suave */
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Mostramos la "X" para cerrar arriba en el panel */
+    .pg-close-wrapper {
+        display: block;
+        text-align: right;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .pg-menu-close {
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 2.2rem;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+        transition: color 0.2s;
+    }
+
+    .pg-menu-close:hover {
+        color: #ef4444;
+    }
+
+    /* Estilos de los enlaces dentro del menú móvil */
+    .pg-nav-item {
+        font-size: 1.2rem !important;
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* 🔥 CLASES ACTIVAS (Se activan con JavaScript al dar clic) */
+    .pg-nav-links.active {
+        right: 0; /* Desplaza el menú hacia adentro de la pantalla */
+    }
+
+    .pg-menu-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
