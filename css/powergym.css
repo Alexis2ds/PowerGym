@@ -792,19 +792,20 @@ p.plan-description {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 10px !important;
+    gap: 12px !important; 
     padding: 12px 20px !important;
-    border-radius: 30px !important; /* Redondos como en la captura */
+    border-radius: 30px !important;
     color: #ffffff !important;
     font-weight: bold !important;
     font-size: 0.95rem !important;
     text-decoration: none !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+    box-sizing: border-box;
 }
 
 .social-icon {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important; 
+    display: inline-block !important;
 }
 
 /* Botón TikTok (Negro mate con iluminación cian/rosa sutil) */
@@ -813,23 +814,30 @@ p.plan-description {
     border: 1px solid #222222 !important;
 }
 .btn-tiktok:hover {
-    box-shadow: 0 0 15px rgba(254, 44, 85, 0.4) !important;
+    background-color: #111111 !important;
+    border-color: #fe2c55 !important; /* Brillo rosa de TikTok en el borde */
+    box-shadow: 0 0 15px rgba(254, 44, 85, 0.3) !important;
 }
-
 /* Botón Facebook (Azul oficial) */
 .btn-facebook {
     background-color: #1877f2 !important;
 }
 .btn-facebook:hover {
+    background-color: #1a83ff !important;
     box-shadow: 0 0 15px rgba(24, 119, 242, 0.4) !important;
 }
 
 /* Botón Instagram (Degradado característico) */
 .btn-instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    position: relative;
+    z-index: 1;
 }
-.btn-instagram:hover {
-    box-shadow: 0 0 15px rgba(220, 39, 67, 0.4) !important;
+.social-btn.btn-instagram:hover {
+    transform: translateY(-2px) !important;
+    opacity: 0.95 !important;
+    /* Forzamos el box-shadow combinando el color de fondo exacto */
+    box-shadow: 0 0 20px rgba(220, 39, 67, 0.6) !important;
 }
 
 /* Hover general para los tres botones */
