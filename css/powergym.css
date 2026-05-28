@@ -90,7 +90,7 @@ body {
 /* 3. BIENVENIDA / HERO SECTION (Con imagen de fondo) */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-                url('../../img/imagenespowergym/fondopower.png') no-repeat center center !important;
+                url('../img/imagenespowergym/fondopower.png') no-repeat center center !important;
     background-size: cover !important; /* Estira la foto perfectamente sin deformarla */
     height: 80vh !important; /* Altura ideal en pantalla */
     display: flex !important;
