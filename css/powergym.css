@@ -21,72 +21,6 @@ body {
     flex-direction: column !important;
 }
 
-/* 2. BARRA DE NAVEGACIÓN (NAVBAR) */
-.pg-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #111111;
-    border-bottom: 2px solid #ef4444; /* Línea roja característica */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.pg-logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.pg-logo-container {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.pg-logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.pg-logo-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-}
-
-.text-red {
-    color: #ef4444;
-}
-
-.pg-nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-.pg-nav-item {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.2s ease;
-}
-
-.pg-nav-item:hover {
-    color: #ef4444;
-}
-.pg-nav-links li a.pg-nav-item.pg-active {
-    color: #ef4444 !important;
-    font-weight: 700 !important;
-}
-
 .hero-section {
     background:
        url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd') no-repeat center center !important;
@@ -926,5 +860,193 @@ p.plan-description {
         padding: 8px 0 !important;
         display: block !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+}
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN (NAVBAR PARA COMPUTADORA)
+   ========================================================================== */
+.pg-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #111111;
+    border-bottom: 2px solid #ef4444; /* Línea roja característica */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pg-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pg-logo-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pg-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pg-logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.text-red {
+    color: #ef4444;
+}
+
+.pg-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.pg-nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.pg-nav-item:hover {
+    color: #ef4444;
+}
+
+.pg-nav-links li a.pg-nav-item.pg-active {
+    color: #ef4444 !important;
+    font-weight: 700 !important;
+}
+
+/* ☰ BOTÓN HAMBURGUESA: Oculto por defecto en computadora */
+.pg-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.pg-menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.pg-close-wrapper {
+    display: none;
+}
+
+/* Capa oscura que cubre el fondo del Hero */
+.pg-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+
+/* ==========================================================================
+   📱 MEDIA QUERY: ENTRAR EN MODO CELULAR (Pantallas menores a 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .pg-navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 1rem 5% !important;
+        position: relative !important;
+    }
+
+    /* Activamos las 3 líneas en el cel */
+    .pg-menu-toggle {
+        display: flex !important;
+        position: relative !important;
+        z-index: 98 !important; 
+    }
+
+    /* 🟥 EL PANEL: Ahora sí inicia escondido a la IZQUIERDA (-280px) */
+    .pg-nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        left: -280px !important; /* Escondido a la izquierda de la pantalla */
+        right: auto !important;  
+        width: 280px !important;
+        height: 100vh !important;
+        background-color: #111111 !important; 
+        border-right: 3px solid #ef4444 !important; /* Detalle de borde rojo */
+        border-left: none !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important; 
+        gap: 25px !important;
+        padding: 2rem !important;
+        z-index: 100 !important; 
+        box-sizing: border-box !important;
+        transition: left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important; /* Desplazamiento fluido */
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    /* 🔥 CUANDO SE ABRE: Desplaza el panel a la posición visible (0) */
+    .pg-nav-links.active {
+        left: 0 !important; 
+    }
+
+    /* Botón de cerrar "X" dentro del panel */
+    .pg-close-wrapper {
+        display: block !important;
+        width: 100% !important;
+        text-align: right !important; 
+        margin-bottom: 1.5rem !important;
+    }
+
+    .pg-menu-close {
+        background: transparent !important;
+        border: none !important;
+        color: #ffffff !important;
+        font-size: 2rem !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        line-height: 1 !important;
+    }
+
+    /* Estilos verticales para los links */
+    .pg-nav-item {
+        font-size: 1.2rem !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 8px 0 !important;
+        display: block !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* Muestra el fondo oscuro exterior */
+    .pg-menu-overlay.active {
+        opacity: 1 !important;
+        pointer-events: auto !important;
     }
 }
