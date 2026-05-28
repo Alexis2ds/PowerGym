@@ -863,7 +863,7 @@ p.plan-description {
     }
 }
 /* ==========================================================================
-   2. BARRA DE NAVEGACIÓN (NAVBAR PARA COMPUTADORA)
+   2. BARRA DE NAVEGACIÓN (ESTILOS GENERALES Y COMPUTADORA)
    ========================================================================== */
 .pg-navbar {
     display: flex;
@@ -931,47 +931,16 @@ p.plan-description {
     font-weight: 700 !important;
 }
 
-/* ☰ BOTÓN HAMBURGUESA: Oculto por defecto en computadora */
-.pg-menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.pg-menu-toggle span {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 2px;
-}
-
-.pg-close-wrapper {
-    display: none;
-}
-
-/* Capa oscura que cubre el fondo del Hero */
+/* ❌ OCULTO EN PC: El botón hamburguesa y la X no deben existir en computadora */
+.pg-menu-toggle,
+.pg-close-wrapper,
 .pg-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 99;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+    display: none;
 }
 
 
 /* ==========================================================================
-   📱 ENTRAR EN MODO CELULAR - CORRECCIÓN DE LÍNEAS Y ALINEACIÓN
+   📱 MEDIA QUERY: ENTRAR EN MODO CELULAR (PANTALLAS MENORES A 768PX)
    ========================================================================== */
 @media (max-width: 768px) {
     /* Forzamos al Navbar a estirar los elementos a los extremos */
@@ -985,59 +954,59 @@ p.plan-description {
         box-sizing: border-box !important;
     }
 
-    /* ☰ BOTÓN HAMBURGUESA: Le damos tamaño real y orden flex vertical */
+    /* ☰ BOTÓN HAMBURGUESA: Configuración de dimensiones y flex vertical para las líneas */
     .pg-menu-toggle {
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
-        width: 30px !important;  /* Ancho del botón */
-        height: 20px !important; /* Alto del botón para dar espacio a las 3 líneas */
+        width: 30px !important;       /* Ancho total del icono */
+        height: 20px !important;      /* Alto total para separar las 3 líneas */
         background: transparent !important;
         border: none !important;
         cursor: pointer !important;
         padding: 0 !important;
         z-index: 98 !important; 
-        margin-left: auto !important; /* Empuja el botón firmemente a la derecha */
+        margin-left: auto !important; /* Lo empuja obligatoriamente a la derecha */
     }
 
-    /* 🔥 AQUÍ SE DIBUJAN LAS 3 LÍNEAS BLANCAS INDEPENDIENTES */
+    /* Dibujo independiente de cada una de las 3 líneas */
     .pg-menu-toggle span {
         display: block !important;
         width: 100% !important;
-        height: 3px !important;
-        background-color: #ffffff !important; /* Color blanco rudo para que resalte */
+        height: 3px !important;      /* Grosor de cada barra */
+        background-color: #ffffff !important; /* Blanco sólido */
         border-radius: 2px !important;
         transition: all 0.3s ease !important;
     }
 
-    /* 🟥 PANEL LATERAL: Escondido correctamente a la izquierda */
+    /* 🟥 PANEL LATERAL: Escondido de forma inicial a la izquierda */
     .pg-nav-links {
         position: fixed !important;
         top: 0 !important;
-        left: -280px !important; 
+        left: -280px !important; /* Escondido */
         right: auto !important;  
         width: 280px !important;
         height: 100vh !important;
         background-color: #111111 !important; 
-        border-right: 3px solid #ef4444 !important; 
+        border-right: 3px solid #ef4444 !important; /* Línea roja de identidad */
         border-left: none !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: flex-start !important; 
         gap: 25px !important;
         padding: 2rem !important;
-        z-index: 100 !important; 
+        z-index: 100 !important; /* Capa por encima de todo */
         box-sizing: border-box !important;
-        transition: left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important; 
+        transition: left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1) !important;
         box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9) !important;
     }
 
-    /* CLASE ACTIVA: Mete el panel a la pantalla */
+    /* CLASE ACTIVA: Desplaza el panel hacia adentro desde la izquierda */
     .pg-nav-links.active {
         left: 0 !important; 
     }
 
-    /* CONTENEDOR DE LA "X" PARA CERRAR */
+    /* CONTENEDOR DE LA "X" INTERNA PARA CERRAR */
     .pg-close-wrapper {
         display: block !important;
         width: 100% !important;
@@ -1059,7 +1028,7 @@ p.plan-description {
         color: #ef4444 !important;
     }
 
-    /* Ajuste de los ítems de menú dentro del panel */
+    /* Ítems del menú vertical dentro del panel celular */
     .pg-nav-item {
         font-size: 1.2rem !important;
         width: 100% !important;
@@ -1067,5 +1036,25 @@ p.plan-description {
         padding: 8px 0 !important;
         display: block !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* Capa oscura de fondo */
+    .pg-menu-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        z-index: 99 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition: opacity 0.3s ease !important;
+    }
+
+    .pg-menu-overlay.active {
+        display: block !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
     }
 }
