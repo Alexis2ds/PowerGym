@@ -89,7 +89,8 @@ body {
 
 /* 3. BIENVENIDA / HERO SECTION (Con imagen de fondo) */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), 
+    /* 💡 Bajamos la opacidad a 0.35 y 0.45 para dejar pasar mucha más luz de la foto */
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), 
                 url('../img/imagenespowergym/fondopower.png') no-repeat center center !important;
     background-size: cover !important;
     height: 80vh !important;
