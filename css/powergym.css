@@ -943,9 +943,9 @@ p.plan-description {
    📱 MEDIA QUERY: ENTRAR EN MODO CELULAR (PANTALLAS MENORES A 768PX)
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Forzamos al Navbar a estirar los elementos a los extremos */
-    .pg-navbar {
+ .pg-navbar {
         display: flex !important;
+        flex-direction: row-reverse !important;
         justify-content: space-between !important;
         align-items: center !important;
         padding: 1rem 5% !important;
@@ -955,18 +955,19 @@ p.plan-description {
     }
 
     /* ☰ BOTÓN HAMBURGUESA: Configuración de dimensiones y flex vertical para las líneas */
-    .pg-menu-toggle {
+   .pg-menu-toggle {
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
-        width: 30px !important;       /* Ancho total del icono */
-        height: 20px !important;      /* Alto total para separar las 3 líneas */
+        width: 30px !important;       
+        height: 20px !important;      
         background: transparent !important;
         border: none !important;
         cursor: pointer !important;
         padding: 0 !important;
         z-index: 98 !important; 
-        margin-left: auto !important; /* Lo empuja obligatoriamente a la derecha */
+        margin-left: 0 !important;
+        margin-right: auto !important; 
     }
 
     /* Dibujo independiente de cada una de las 3 líneas */
