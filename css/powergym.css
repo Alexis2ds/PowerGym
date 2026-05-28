@@ -321,10 +321,17 @@ body {
 
 .plan-card-content {
     padding: 2.5rem 2rem !important;
+    box-sizing: border-box !important;
+    
     flex: 1 !important;
     display: flex !important;
-    flex-dir
-
+    flex-direction: column !important;
+    justify-content: flex-start !important; 
+}
+.plan-features {
+    margin-top: auto !important;
+    width: 100% !important;
+}
 /* TARJETA DESTACADA (MES COMPLETO) */
 .featured-card {
     border-color: #ef4444 !important;
