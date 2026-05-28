@@ -511,3 +511,81 @@ p.plan-description {
         transform: translateY(-5px) !important;
     }
 }
+/* ==========================================================================
+   SECCIÓN DE PLANES - BANNER INFERIOR 
+   ========================================================================== */
+.instalaciones-banner {
+    background-color: #141414 !important;
+    border: 1px solid #222222 !important;
+    border-radius: 16px !important;
+    max-width: 1110px; /* Alínealo con el ancho máximo de tus 3 tarjetas juntas */
+    margin: 5rem auto 2rem auto !important; /* Buen espacio arriba para que respire */
+    padding: 2rem 2.5rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    box-sizing: border-box;
+}
+
+.banner-content {
+    flex: 1 !important;
+}
+
+.banner-title {
+    color: #ffffff !important;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+    margin: 0 0 0.5rem 0 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.banner-text {
+    color: #a3a3a3 !important;
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* Botón interactivo */
+.banner-btn {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ef4444 !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    font-size: 0.95rem !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: all 0.3s ease !important;
+}
+
+.banner-btn:hover {
+    background-color: #ef4444 !important; 
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-arrow {
+    margin-left: 8px !important;
+    transition: transform 0.3s ease !important;
+    display: inline-block !important;
+}
+
+.banner-btn:hover .btn-arrow {
+    transform: translateX(4px) !important; 
+}
+
+@media (max-width: 768px) {
+    .instalaciones-banner {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 2rem 1.5rem !important;
+        margin: 3rem 1rem 2rem 1rem !important;
+    }
+    .banner-btn {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
