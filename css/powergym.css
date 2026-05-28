@@ -348,16 +348,40 @@ p.plan-description {
 }
 
 /* TARJETA DESTACADA (MES COMPLETO) */
+.plan-card {
+    background-color: #141414 !important;
+    border: 2px solid #222222 !important;
+    border-radius: 16px !important;
+    flex: 1 !important;
+    min-width: 290px !important;
+    max-width: 350px !important;
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important; /* 👈 Animación suave para todas */
+    
+    display: flex !important;
+    flex-direction: column !important; 
+}
+
+/* Tarjeta destacada (Mes Completo) - se ve un pelín más grande desde el inicio */
 .featured-card {
     border-color: #ef4444 !important;
     background-color: #161212 !important;
     transform: scale(1.03);
 }
 
-.featured-card:hover {
-    transform: scale(1.03) translateY(-5px);
+/* 🔥 EFECTO HOVER PARA LAS TARJETAS NORMALES (Rutina y Quincena) */
+.plan-card:not(.featured-card):hover {
+    transform: translateY(-5px) scale(1.02) !important; /* Eleva y hace un mini zoom */
+    border-color: #404040 !important; /* Aclara el borde sutilmente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* 🔥 EFECTO HOVER PARA LA TARJETA DESTACADA (Mes Completo) */
+.featured-card:hover {
+    transform: scale(1.05) translateY(-5px) !important; /* Mantiene su jerarquía expandiéndose un poquito más */
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.15) !important; /* Brillo rojo sutil de fondo */
+}
 /* BADGE RECOMENDADO */
 .badge-recommended {
     position: absolute;
