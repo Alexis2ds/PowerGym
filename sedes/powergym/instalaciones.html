@@ -10,21 +10,31 @@
 <body>
 
     <!-- NAVBAR  -->
-    <nav class="pg-navbar">
-        <div class="pg-logo-wrapper">
-            <div class="pg-logo-container">
-                <img src="../../img/imagenespowergym/Logogym.jpeg" alt="PowerGym Logo" class="pg-logo-img">
-            </div>
-            <span class="pg-logo-text"><span class="text-red">Power</span>Gym</span>
+   <nav class="pg-navbar">
+    <div class="pg-logo-wrapper">
+        <div class="pg-logo-container">
+            <img src="../../img/imagenespowergym/Logogym.jpeg" alt="Logo PowerGym" class="pg-logo-img">
         </div>
-        <ul class="pg-nav-links">
-            <li><a href="powergym.html" class="pg-nav-item">← Volver</a></li>
-            <li><a href="planes.html" class="pg-nav-item">Planes</a></li>
-            <li><a href="instalaciones.html" class="pg-nav-item pg-active">Instalaciones</a></li>
-            <li><a href="catalogo.html" class="pg-nav-item">Catálogo</a></li>
+        <span class="pg-logo-text"><span class="text-red">Power</span>Gym</span>
+    </div>
+    
+    <button class="pg-menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <ul class="pg-nav-links" id="navLinks">
+        <li class="pg-close-wrapper"><button class="pg-menu-close" id="menuClose">&times;</button></li>
+        <li><a href="powergym.html" class="pg-nav-item">← Volver</a></li>
+        <li><a href="planes.html" class="pg-nav-item">Planes</a></li>
+        <li><a href="instalaciones.html" class="pg-nav-item pg-active">Instalaciones</a></li>
+        <li><a href="catalogo.html" class="pg-nav-item">Catálogo</a></li>
         <li><a href="equipamiento.html" class="pg-nav-item">Equipamiento</a></li>
-        </ul>
-    </nav>
+    </ul>
+
+    <div class="pg-menu-overlay" id="menuOverlay"></div>
+</nav>
 
     <!-- MAIN CON EL MISMO HEADER DE PLANES -->
     <main class="instalaciones-section">
