@@ -926,7 +926,9 @@ p.plan-description {
     color: #ef4444;
 }
 
-.pg-nav-links li a.pg-nav-item.pg-active {
+.pg-nav-links li a.pg-nav-item.pg-active,
+a.pg-nav-item.pg-active,
+.pg-active {
     color: #ef4444 !important;
     font-weight: 700 !important;
 }
